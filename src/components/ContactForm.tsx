@@ -3,7 +3,7 @@
 "use client";
 import React from "react";
 import { useForm, ValidationError } from "@formspree/react"; // <-- 1. Importamos las herramientas de Formspree
-import { motion } from "framer-motion";
+
 
 const ContactForm = () => {
   // 2. Usamos el hook 'useForm'. Pega aquí el ID único de tu formulario.

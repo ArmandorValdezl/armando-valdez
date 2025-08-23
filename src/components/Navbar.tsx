@@ -3,7 +3,7 @@
 "use client";
 import React  from "react";
 import Link from "next/link"; // Usamos el componente Link de Next.js para una navegación optimizada
-import { motion } from "framer-motion";
+
 
 // Definimos los enlaces que aparecerán en la Navbar para que sea fácil de mantener
 const navLinks = [
