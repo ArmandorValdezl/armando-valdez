@@ -1,6 +1,6 @@
 //app/page.tsx
 "use client"; // <-- 1. Convertimos la página en un Componente de Cliente para usar hooks
-{/*  --------------------------    ZONA DE IMPORTACIONES    -----------------------------  */}
+/*  --------------------------    ZONA DE IMPORTACIONES    -----------------------------  */
 import React, { useEffect } from "react";
 import { useInView } from "react-intersection-observer"; // <-- 2. Importamos el hook mágico
 
@@ -11,7 +11,7 @@ import AboutMe from "@/components/AboutMe";
 import ContactForm from "@/components/ContactForm";
 import Navbar from "@/components/Navbar";
 
-{/*  --------------------------    FIN DE ZONA DE IMPORTACIONES    -----------------------------  */}
+/*  --------------------------    FIN DE ZONA DE IMPORTACIONES    -----------------------------  */
 
 
 export default function HomePage() {
@@ -37,7 +37,7 @@ export default function HomePage() {
     <> {/* Usamos un fragmento para agrupar Navbar y main */}
       {/* Pasamos el estado y la función para actualizarlo a la Navbar */}
       <Navbar activeSection={activeSection} setActiveSection={setActiveSection} />
-      <main className="flex min-h-screen flex-col items-center p-4">
+      <main className="flex min-h-screen flex-col items-center p-4 pt-24">
 
 
     {/*  --------------------------    ZONA DE HEADER    -----------------------------  */}
@@ -104,13 +104,13 @@ export default function HomePage() {
       </section>
       {/*  --------------------------    FIN ZONA DE PROYECTOS    -----------------------------  */}
       {/*  --------------------------    ZONA DE SOBRE MÍ    -----------------------------  */}
-      <div ref={aboutRef}>
+      <div ref={aboutRef} id="sobre-mi">
         <AboutMe />
       </div>
       
       {/*  --------------------------    FIN ZONA DE SOBRE MÍ    -----------------------------  */}
       {/*  --------------------------    ZONA DE CONTACTOS    -----------------------------  */}
-      <div ref={contactRef}>
+      <div ref={contactRef} id="contacto">
         <ContactForm />
       </div>
       {/*  --------------------------    FIN ZONA DE CONTACTOS    -----------------------------  */}
