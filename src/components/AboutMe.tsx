@@ -2,21 +2,23 @@
 
 "use client";
 import React from "react";
-import { motion } from "framer-motion"; // Importamos 'motion' de framer-motion
+import { motion } from "framer-motion";
 import Skills from "./Skills";
+import { useTranslations } from "next-intl";
 
 const AboutMe = () => {
-  // Con 'variants' definimos los estados de nuestra animación: inicial y final.
+  const t = useTranslations("AboutMe");
+
   const fadeInAnimation = {
     initial: {
       opacity: 0,
-      y: 100, // Empezará 100px más abajo de su posición final
+      y: 100,
     },
     animate: {
       opacity: 1,
-      y: 0, // Terminará en su posición original
+      y: 0,
       transition: {
-        delay: 0.2, // Una pequeña pausa antes de empezar
+        delay: 0.2,
       },
     },
   };
@@ -26,17 +28,13 @@ const AboutMe = () => {
       <motion.div
         variants={fadeInAnimation}
         initial="initial"
-        whileInView="animate" // La animación se activará cuando el elemento entre en la pantalla
-        viewport={{ once: true }} // Se animará solo una vez
+        whileInView="animate"
+        viewport={{ once: true }}
       >
-        <h2 className="text-4xl font-bold mb-8">Sobre Mí</h2>
-        <div className="text-lg text-gray-300 space-y-6">
-          <p>
-            Mi viaje al mundo del software comenzó a miles de pies de altura. Fascinado por la ingeniería aeronáutica, aprendí que la metodología y el pensamiento estructurado son la base para que un sistema complejo vuele de forma segura y 'sana'. Fue allí, en una clase de algoritmos, donde descubrí un universo aún más grande: la capacidad de construir cualquier cosa, desde cualquier lugar, a través del código.
-          </p>
-          <p>
-            Hoy, aplico a cada proyecto el mismo principio que aprendí en física: la 'Superposición de Efectos'. Abordo cada desafío de software desfragmentándolo en pequeñas piezas para construir soluciones robustas, escalables y centradas en el usuario. Porque para mí, la tecnología es la mayor herramienta de progreso, y me hace feliz crear herramientas que solucionen problemas reales y apalanquen el esfuerzo humano.
-          </p>
+        <h2 className="text-4xl font-bold mb-8 text-slate-800 dark:text-white">{t("title")}</h2>
+        <div className="text-lg text-slate-600 dark:text-gray-300 space-y-6 leading-relaxed">
+          <p>{t("p1")}</p>
+          <p>{t("p2")}</p>
         </div>
       </motion.div>
 

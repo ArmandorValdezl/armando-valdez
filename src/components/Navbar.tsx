@@ -1,13 +1,9 @@
 // src/components/Navbar.tsx
 "use client";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { ThemeSwitcher } from "./ThemeSwitcher";
-
-const navLinks = [
-  { name: "Proyectos", hash: "#proyectos" },
-  { name: "Sobre Mí",  hash: "#sobre-mi" },
-  { name: "Contacto",  hash: "#contacto" },
-];
+import { useTranslations } from "next-intl";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 type NavbarProps = {
   activeSection: string;
@@ -15,18 +11,27 @@ type NavbarProps = {
 };
 
 export default function Navbar({ activeSection, setActiveSection }: NavbarProps) {
+  const t = useTranslations("Navbar");
+
+  const navLinks = [
+    { name: t("projects"), hash: "#proyectos" },
+    { name: t("about"),  hash: "#sobre-mi" },
+    { name: t("experience"), hash: "#experiencia" },
+    { name: t("contact"),  hash: "#contacto" },
+  ];
+
   return (
-    <header className="fixed inset-x-0 top-0 z-50 bg-gray-900/50 backdrop-blur-sm h-16">
+    <header className="fixed inset-x-0 top-0 z-50 bg-white/80 dark:bg-gray-900/50 backdrop-blur-md h-16 border-b border-slate-200 dark:border-white/5">
       <div className="flex items-center justify-between max-w-6xl mx-auto px-4 h-full">
         {/* Logo */}
         <Link
           href="#inicio"
           onClick={() => setActiveSection("Inicio")}
           className={`
-            text-2xl font-bold
+            text-2xl font-bold transition-colors duration-300
             ${activeSection === "Inicio"
-              ? "text-cyan-400 dark:text-cyan-300"
-              : "text-slate-200 dark:text-gray-400 hover:text-cyan-400"
+              ? "text-cyan-600 dark:text-cyan-400"
+              : "text-slate-800 dark:text-gray-400 hover:text-cyan-600 dark:hover:text-cyan-400"
             }
           `}
         >
@@ -42,10 +47,10 @@ export default function Navbar({ activeSection, setActiveSection }: NavbarProps)
                   href={link.hash}
                   onClick={() => setActiveSection(link.name)}
                   className={`
-                    relative transition-colors duration-300
+                    relative transition-colors duration-300 font-medium
                     ${activeSection === link.name
-                      ? "text-cyan-400 dark:text-cyan-300"
-                      : "text-slate-200 dark:text-gray-400 hover:text-cyan-400"
+                      ? "text-cyan-600 dark:text-cyan-400 font-bold"
+                      : "text-slate-600 dark:text-gray-400 hover:text-cyan-600 dark:hover:text-cyan-400"
                     }
                   `}
                 >
@@ -53,7 +58,7 @@ export default function Navbar({ activeSection, setActiveSection }: NavbarProps)
                   <span
                     className={`
                       absolute left-0 -bottom-1 h-[2px]
-                      bg-cyan-400 dark:bg-cyan-300
+                      bg-cyan-600 dark:bg-cyan-400
                       transition-all duration-300
                       ${activeSection === link.name
                         ? "w-full"
@@ -64,6 +69,9 @@ export default function Navbar({ activeSection, setActiveSection }: NavbarProps)
                 </Link>
               </li>
             ))}
+            <li>
+              <LanguageSwitcher />
+            </li>
             <li>
               <ThemeSwitcher />
             </li>

@@ -1,0 +1,48 @@
+{
+  "HomePage": {
+    "title": "ARMANDO VALDEZ",
+    "viewProjects": "Mira mis proyectos",
+    "downloadCv": "Descarga mi CV",
+    "projectsTitle": "Mis Proyectos",
+    "companyProjectsTitle": "Proyectos Empresariales",
+    "aboutMeTitle": "Sobre Mí",
+    "contactTitle": "Contacto"
+  },
+  "Navbar": {
+    "projects": "Proyectos",
+    "about": "Sobre Mí",
+    "experience": "Experiencia",
+    "contact": "Contacto"
+  },
+  "AboutMe": {
+    "title": "Sobre Mí",
+    "p1": "Mi viaje al mundo del software comenzó a miles de pies de altura. Fascinado por la ingeniería aeronáutica, aprendí que la metodología y el pensamiento estructurado son la base para que un sistema complejo vuele de forma segura y 'sana'.",
+    "p2": "Como experto en Moodle, combino esta mentalidad analítica con la especialización en plataformas educativas y el ecosistema React. Mi enfoque es la 'Superposición de Efectos': desfragmentar problemas complejos en soluciones robustas, escalables y centradas en el usuario, creando herramientas que multipliquen el esfuerzo humano."
+  },
+  "Skills": {
+    "title": "Mis Habilidades",
+    "frontend": "Frontend",
+    "backend": "Backend & Base de Datos",
+    "tools": "Herramientas"
+  },
+  "Experience": {
+    "title": "Experiencia y Educación"
+  },
+  "ContactForm": {
+    "title": "¡Hablemos!",
+    "subtitle": "¿Tienes un proyecto en mente o una oportunidad para mí? ¡No dudes en contactarme!",
+    "name": "Nombre",
+    "email": "Email",
+    "message": "Mensaje",
+    "send": "Enviar Mensaje",
+    "sending": "Enviando...",
+    "success": "¡Mensaje enviado con éxito!",
+    "successSub": "Me pondré en contacto contigo pronto.",
+    "error": "Hubo un error al enviar el mensaje."
+  },
+  "Footer": {
+    "madeWith": "Hecho con",
+    "by": "por",
+    "rights": "Todos los derechos reservados"
+  }
+}

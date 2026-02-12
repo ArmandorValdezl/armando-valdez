@@ -1,0 +1,48 @@
+{
+  "HomePage": {
+    "title": "ARMANDO VALDEZ",
+    "viewProjects": "View my projects",
+    "downloadCv": "Download my CV",
+    "projectsTitle": "My Projects",
+    "companyProjectsTitle": "Company Projects",
+    "aboutMeTitle": "About Me",
+    "contactTitle": "Contact"
+  },
+  "Navbar": {
+    "projects": "Projects",
+    "about": "About Me",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "AboutMe": {
+    "title": "About Me",
+    "p1": "Full-Stack Developer passionate about creating exceptional digital experiences that combine elegant design with high-performance functionality.",
+    "p2": "Moodle Expert with an extensive track record in the implementation and customization of educational platforms. Specialized in the React ecosystem and mobile solutions with React Native."
+  },
+  "Skills": {
+    "title": "My Skills",
+    "frontend": "Frontend",
+    "backend": "Backend & Database",
+    "tools": "Tools"
+  },
+  "Experience": {
+    "title": "Experience & Education"
+  },
+  "ContactForm": {
+    "title": "Let's talk!",
+    "subtitle": "Do you have a project in mind or an opportunity for me? Don't hesitate to contact me!",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent successfully!",
+    "successSub": "I'll get back to you soon.",
+    "error": "There was an error sending the message."
+  },
+  "Footer": {
+    "madeWith": "Built with",
+    "by": "by",
+    "rights": "All rights reserved"
+  }
+}
