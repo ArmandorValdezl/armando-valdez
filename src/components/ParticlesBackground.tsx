@@ -99,7 +99,7 @@ const ParticlesBackground = () => {
       },
       detectRetina: true,
     }),
-    [currentTheme, particleColor],
+    [particleColor],
   );
 
   if (init) {

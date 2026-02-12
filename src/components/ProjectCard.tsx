@@ -6,7 +6,7 @@ import Image from "next/image";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import { type Project } from "@/data/projects";
-import { useLocale, useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 
 type ProjectCardProps = {
   project: Project;
