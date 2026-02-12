@@ -6,7 +6,9 @@ import { motion } from "framer-motion";
 import { useTranslations, useLocale } from "next-intl";
 import { FiBriefcase, FiBookOpen } from "react-icons/fi";
 
-const ExperienceItem = ({ item, index, locale }: { item: any, index: number, locale: "en" | "es" }) => {
+import { type ExperienceItem as ExperienceData } from "@/data/experience";
+
+const ExperienceItem = ({ item, index, locale }: { item: ExperienceData, index: number, locale: "en" | "es" }) => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (

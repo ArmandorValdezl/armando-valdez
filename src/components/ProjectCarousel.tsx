@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useRef, useState, useEffect } from "react";
-import { motion, useMotionValue, useSpring, AnimatePresence } from "framer-motion";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 import { Project } from "@/data/projects";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
@@ -12,7 +12,6 @@ interface ProjectCarouselProps {
 
 const ProjectCarousel = ({ projects }: ProjectCarouselProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const containerRef = useRef<HTMLDivElement>(null);
 
   const nextProject = () => {
     setCurrentIndex((prev) => (prev + 1) % projects.length);

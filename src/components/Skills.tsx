@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { skillsData } from "@/data/skills";
+import { skillsData, type Skill } from "@/data/skills";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useTranslations } from "next-intl";
 
@@ -20,7 +20,7 @@ const skillVariant = {
   visible: { opacity: 1, scale: 1, y: 0 },
 };
 
-const SkillItem = ({ skill, size = "normal" }: { skill: any, size?: "large" | "normal" }) => {
+const SkillItem = ({ skill, size = "normal" }: { skill: Skill, size?: "large" | "normal" }) => {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 

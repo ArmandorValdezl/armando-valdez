@@ -14,7 +14,6 @@ type ProjectCardProps = {
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
   const locale = useLocale() as "en" | "es";
-  const t = useTranslations("HomePage");
 
   // Tilt Effect State
   const x = useMotionValue(0);

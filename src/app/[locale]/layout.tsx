@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Ubuntu } from "next/font/google";
 import { Providers } from "./providers";
 import "../globals.css";
@@ -22,7 +21,7 @@ export default async function RootLayout({
   const {locale} = await params;
 
   // Ensure that the incoming `locale` is valid
-  if (!routing.locales.includes(locale as any)) {
+  if (!routing.locales.includes(locale as "en" | "es")) {
     notFound();
   }
 
